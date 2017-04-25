@@ -7,7 +7,7 @@
  require_once('dbConnect.php');
  
  
- $sql = "SELECT id,_user, email, name, address, role FROM user WHERE user.email='".$email."'";
+ $sql = "SELECT id_user, email, name, address, role FROM user WHERE email='".$email."'";
  
  $r = mysqli_query($con,$sql);
  
