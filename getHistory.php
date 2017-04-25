@@ -6,7 +6,7 @@ define('DB','cdry');
  
   $con = mysqli_connect(HOST,USER,PASS,DB);
   $em  = $_GET['email'];
-  $sql = "select * from order where status='Done' and email='".$em."'";
+  $sql = "select * from orders where status='Done' and email='".$em."'";
 
   $res = mysqli_query($con,$sql);
   
