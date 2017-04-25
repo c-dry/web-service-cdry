@@ -5,8 +5,8 @@ define('PASS','');
 define('DB','cdry');
  
   $con = mysqli_connect(HOST,USER,PASS,DB);
-  $email  = $_GET['email'];
-  $sql = "select * from order where status='Done' and email='".$email."'";
+  $em  = $_GET['email'];
+  $sql = "select * from order where status='Done' and email='".$em."'";
 
   $res = mysqli_query($con,$sql);
   
