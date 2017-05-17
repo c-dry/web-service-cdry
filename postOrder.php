@@ -4,22 +4,18 @@
  //Getting values
  $email = $_POST['email'];
  $address = $_POST['address'];
- $weight = $_POST['weight'];
- $price = $_POST['price'];
  $date_order = $_POST['date_order'];
- $date_end = $_POST['date_end'];
- $status = $_POST['status'];
  //Creating an sql query
- $sql = "INSERT INTO order (email,address,weight,price,date_order,date_end,status) VALUES ('$email','$address','$weight','$price','$date_order','$date_end','Undone')";
+ $sql = "INSERT INTO orders (email,address,date_order,status) VALUES ('$email','$address','$date_order','Undone')";
 
  //Importing our db connection script
  require_once('dbConnect.php');
 
  //Executing query to database
  if(mysqli_query($con,$sql)){
- echo 'Order berhasil di input';
+ echo 'Add Order Success';
  }else{
- echo 'Tidak dapat menambah Order';
+ echo 'Add Order Failed';
  }
 
  //Closing the database

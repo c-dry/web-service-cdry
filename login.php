@@ -17,11 +17,14 @@ $check = mysqli_fetch_array($res);
  
 if(isset($check))
 {
-echo 'success';
+	if($check[5]==1)
+		echo 'success admin';
+	else
+		echo 'success user';
 }
 else
 {
-echo 'failure';
+	echo 'failure';
 }
  
 mysqli_close($con);

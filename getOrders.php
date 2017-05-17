@@ -6,7 +6,7 @@ define('DB','u917918641_cdry');
 
   $con = mysqli_connect(HOST,USER,PASS,DB);
   $em  = $_GET['email'];
-  $sql = "select * from orders where status='Undone' and email='".$em."'";
+  $sql = "select * from orders where status='Undone' and email='".$em."' order by date_order";
 
   $res = mysqli_query($con,$sql);
 

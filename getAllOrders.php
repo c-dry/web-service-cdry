@@ -5,8 +5,7 @@ define('PASS','123456');
 define('DB','u917918641_cdry');
 
   $con = mysqli_connect(HOST,USER,PASS,DB);
-  $em  = $_GET['email'];
-  $sql = "select * from orders where status='Done' and email='".$em."' order by date_order";
+  $sql = "select * from orders order by date_order";
 
   $res = mysqli_query($con,$sql);
 
@@ -15,7 +14,7 @@ define('DB','u917918641_cdry');
   while($row = mysqli_fetch_array($res)){
     array_push($result,
     array('id_order'=>$row[0],
-	'email'=>$row[1],
+  'email'=>$row[1],
   'address'=>$row[2],
     'weight'=>$row[3],
 	'price'=>$row[4],
