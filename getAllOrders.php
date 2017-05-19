@@ -5,7 +5,7 @@ define('PASS','123456');
 define('DB','u917918641_cdry');
 
   $con = mysqli_connect(HOST,USER,PASS,DB);
-  $sql = "select * from orders order by date_order";
+  $sql = "select * from orders where status='Undone' order by date_order";
 
   $res = mysqli_query($con,$sql);
 
